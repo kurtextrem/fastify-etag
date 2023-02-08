@@ -29,9 +29,12 @@
   },
   "homepage": "https://github.com/fastify/fastify-etag#readme",
   "devDependencies": {
+    "@multiformats/murmur3": "^2.1.3",
     "@types/node": "^18.0.0",
     "autocannon": "^7.0.0",
+    "crc-32": "^1.2.2",
     "fastify": "^4.0.0-rc.2",
+    "murmur3hash-wasm": "^1.0.1",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tap": "^16.0.0",
