@@ -23,7 +23,7 @@ const pauseFor = ms =>
 let currentServerInstance = null
 const startServerFor = (test, port) => {
 	const env = Object.assign({}, test.options, { PORT: port, PATH: process.env.PATH })
-	currentServerInstance = spawn(serverPath, [], {
+	currentServerInstance = spawn('node ' + serverPath, [], {
 		env,
 		stdio: ['ignore', logs, errors],
 		shell: true,
