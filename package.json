@@ -35,6 +35,7 @@
     "crc-32": "^1.2.2",
     "fastify": "^4.0.0-rc.2",
     "murmur3hash-wasm": "^1.0.1",
+    "murmurhash3js-revisited": "^3.0.0",
     "snazzy": "^9.0.0",
     "standard": "^17.0.0",
     "tap": "^16.0.0",

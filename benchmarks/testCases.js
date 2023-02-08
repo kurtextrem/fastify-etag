@@ -5,12 +5,19 @@ const mb = val => val * 1024 * 1024
 
 const testCases = [
 	// no e-tag
-	{ name: 'No etag', group: '32 bytes', subgroup: 'string', options: { CONTENT_FORMAT: 'string', CONTENT_SIZE: 32 } },
+	/*{ name: 'No etag', group: '32 bytes', subgroup: 'string', options: { CONTENT_FORMAT: 'string', CONTENT_SIZE: 32 } },
 	{ name: 'No etag', group: '32 bytes', subgroup: 'buffer', options: { CONTENT_FORMAT: 'buffer', CONTENT_SIZE: 32 } },
 	{ name: 'No etag', group: '2 kb', subgroup: 'string', options: { CONTENT_FORMAT: 'string', CONTENT_SIZE: kb(2) } },
 	{ name: 'No etag', group: '2 kb', subgroup: 'buffer', options: { CONTENT_FORMAT: 'buffer', CONTENT_SIZE: kb(2) } },
 	{ name: 'No etag', group: '2 Mb', subgroup: 'string', options: { CONTENT_FORMAT: 'string', CONTENT_SIZE: mb(2) } },
-	{ name: 'No etag', group: '2 Mb', subgroup: 'buffer', options: { CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) } },
+	{ name: 'No etag', group: '2 Mb', subgroup: 'buffer', options: { CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) } },*/
+
+	{ name: 'djb2', group: '32 bytes', subgroup: 'string', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'string', CONTENT_SIZE: 32 } },
+	{ name: 'djb2', group: '32 bytes', subgroup: 'buffer', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: 32 } },
+	{ name: 'djb2', group: '2 kb', subgroup: 'string', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'string', CONTENT_SIZE: kb(2) } },
+	{ name: 'djb2', group: '2 kb', subgroup: 'buffer', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: kb(2) } },
+	{ name: 'djb2', group: '2 Mb', subgroup: 'string', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'string', CONTENT_SIZE: mb(2) } },
+	{ name: 'djb2', group: '2 Mb', subgroup: 'buffer', options: { ALGORITHM: 'djb2', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) } },
 
 	// crc32
 	{ name: 'crc32', group: '32 bytes', subgroup: 'string', options: { ALGORITHM: 'crc32', CONTENT_FORMAT: 'string', CONTENT_SIZE: 32 } },
@@ -35,40 +42,22 @@ const testCases = [
 	{ name: 'murmur3', group: '2 Mb', subgroup: 'buffer', options: { ALGORITHM: 'murmur3', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) } },
 
 	{
-		name: 'murmur332',
-		group: '32 bytes',
-		subgroup: 'string',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'string', CONTENT_SIZE: 32 },
-	},
-	{
-		name: 'murmur332',
+		name: 'MurmurHash3',
 		group: '32 bytes',
 		subgroup: 'buffer',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: 32 },
+		options: { ALGORITHM: 'MurmurHash3', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: 32 },
 	},
 	{
-		name: 'murmur332',
-		group: '2 kb',
-		subgroup: 'string',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'string', CONTENT_SIZE: kb(2) },
-	},
-	{
-		name: 'murmur332',
+		name: 'MurmurHash3',
 		group: '2 kb',
 		subgroup: 'buffer',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: kb(2) },
+		options: { ALGORITHM: 'MurmurHash3', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: kb(2) },
 	},
 	{
-		name: 'murmur332',
-		group: '2 Mb',
-		subgroup: 'string',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'string', CONTENT_SIZE: mb(2) },
-	},
-	{
-		name: 'murmur332',
+		name: 'MurmurHash3',
 		group: '2 Mb',
 		subgroup: 'buffer',
-		options: { ALGORITHM: 'murmur332', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) },
+		options: { ALGORITHM: 'MurmurHash3', CONTENT_FORMAT: 'buffer', CONTENT_SIZE: mb(2) },
 	},
 
 	{
